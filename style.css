@@ -713,9 +713,9 @@ nav a:hover {
     color: var(--fit-lime);
 }
 
-.navbar .btn-small {
+.navbar .nav-content > .btn.btn-small {
     background: var(--fit-lime);
-    color: var(--fit-ink);
+    color: #000;
 }
 
 .btn {
@@ -796,6 +796,10 @@ nav a:hover {
     background: #171d12;
     border-color: #30382a;
     color: #f7f8f2;
+}
+
+.dashboard-body {
+    color: #000;
 }
 
 .user-circle,
@@ -933,3 +937,30 @@ footer .logo-icon {
         transform: none;
     }
 }
+
+/* Navegacion adaptable */
+@media (max-width: 850px) {
+    .navbar nav {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: thin;
+    }
+
+    .nav-content {
+        gap: 12px;
+    }
+
+    .navbar .nav-content > .btn.btn-small {
+        display: none;
+    }
+}
+
+
+
+/* Imagen de fondo de la portada */
+.hero {
+    background: linear-gradient(rgba(16, 20, 13, 0.68), rgba(16, 20, 13, 0.78)), url('https://cdn.static.aptavs.com/imagenes/ejercicios-basicos-de-gimnasio-cuales-son-y-su-importancia/ejercicios-basicos-de-gimnasio_905x603.jpg') center / cover no-repeat;
+}
+
